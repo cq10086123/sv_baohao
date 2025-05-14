@@ -1,0 +1,29 @@
+name: 自动运行采集脚本
+
+on:
+  workflow_dispatch:  # 手动触发
+  schedule:
+    - cron: '0 0 1 */15 *'  # 每天凌晨 2 点自动执行（可修改）
+
+jobs:
+  run-coco1:
+    runs-on: ubuntu-latest
+
+    env:
+      LOGIN_URL: ${{ secrets.LOGIN_URL }}
+
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v3
+
+      - name: 设置 Python 环境
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: 安装依赖
+        run: |
+          pip install requests paramiko urllib3
+
+      - name: 运行采集脚本
+        run: python serv00.py
