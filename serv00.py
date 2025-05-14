@@ -56,7 +56,7 @@ def LoginPanel():
     res = requests.post(host, data=data, headers=headers, cookies=res.cookies, verify=False)
     if res.text.find('/logout/') != -1:
         print('面板登录成功')
-        send_telegram_message("面板登录成功")  # 发送电报通知
+        #send_telegram_message("面板登录成功")  # 发送电报通知
     else:
         print('面板登录失败')
         send_telegram_message("面板登录失败")  # 发送电报通知
@@ -79,7 +79,7 @@ def LoginSsh():
             stdin, stdout, stderr = ssh.exec_command("curl ifconfig.me")
             ip = stdout.read().decode()
             print(f"当前IP: {ip}")
-            send_telegram_message(f"SSH连接成功，当前IP: {ip}")  # 发送电报通知
+            send_telegram_message(f"serv00连接成功，当前IP: {ip}")  # 发送电报通知
         except Exception as e:
             print(f"SSH连接失败: {e}")
             send_telegram_message(f"SSH连接失败: {e}")  # 发送电报通知
