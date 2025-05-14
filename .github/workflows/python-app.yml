@@ -26,4 +26,4 @@ jobs:
           pip install requests paramiko urllib3
 
       - name: 运行采集脚本
-        run: python serv00.py | tee output.log
+        run: python -u serv00.py | tee output.log
