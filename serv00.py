@@ -47,6 +47,7 @@ def LoginSsh():
             print(f"SSH连接失败: {e}")
             os._exit(0)
 if __name__ == '__main__':
+    print("启动脚本")
     # 从环境变量中获取服务器信息
     Serv00 = os.environ.get('LOGIN_URL')
     if Serv00 is None:
