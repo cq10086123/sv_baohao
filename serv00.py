@@ -49,7 +49,7 @@ def LoginSsh():
 if __name__ == '__main__':
     print("启动脚本")
     # 从环境变量中获取服务器信息
-    Serv00 = os.environ.get('LOGIN_URL')
+    Serv00 = os.getenv("LOGIN_URL")
     if Serv00 is None:
         print('没有找到服务器信息,请重新设置变量Serv00')
         os._exit(0)
