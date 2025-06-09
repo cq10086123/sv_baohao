@@ -99,8 +99,7 @@ if __name__ == '__main__':
 
 
 
-    hostname_number = hostname.split('.')[0].replace('s', '')
-    host = f'https://panel{hostname_number}.serv00.com/login/'
+    host = f'https://{hostname}/login/'
     print(f"host: {host}")
 
     LoginPanel()
