@@ -97,12 +97,11 @@ if __name__ == '__main__':
     username = info[1]
     password = info[2]
 
-    print(f"hostname: {hostname}")
-    print(f"username: {username}")
-    print(f"password: {password}")
+
 
     hostname_number = hostname.split('.')[0].replace('s', '')
     host = f'https://panel{hostname_number}.serv00.com/login/'
+    print(f"host: {host}")
 
     LoginPanel()
     LoginSsh()
