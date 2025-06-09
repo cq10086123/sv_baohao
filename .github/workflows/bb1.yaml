@@ -28,7 +28,7 @@ jobs:
           pip install requests paramiko urllib3
 
       - name: 运行采集脚本
-        run: python -u serv00.py | tee output.log
+        run: python -u bb1.py | tee output.log
 
   workflow-keepalive:
     if: github.event_name == 'schedule'
