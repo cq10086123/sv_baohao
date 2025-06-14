@@ -3,7 +3,7 @@ name: 自动1
 on:
   workflow_dispatch:  # 手动触发
   schedule:
-    - cron: "0 0 1,5 * *"  # 每月1号运行一次
+    - cron: "0 0 3,21 * *"  # 每月1号运行一次
 
 jobs:
   run-coco1:
