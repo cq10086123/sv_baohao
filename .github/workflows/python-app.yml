@@ -3,7 +3,7 @@ name: 自动运行采集脚本
 on:
   workflow_dispatch:  # 手动触发
   schedule:
-    - cron: "0 0 1,15 * *"  # 每月1号运行一次
+    - cron: "0 0 6,29 * *"  # 每月1号运行一次
 
 jobs:
   run-coco1:
